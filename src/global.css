@@ -1,0 +1,17 @@
+body {
+  background-color: var(--Fundo);
+}
+
+.form-control {
+  background-color: transparent;
+  border: none;
+  color: var(--White);
+}
+
+.btn-zap {
+  width: 65px;
+}
+.btn-zap img {
+  width: 100%;
+  height: 100%;
+}
