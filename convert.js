@@ -34,11 +34,15 @@ document.getElementById('button').addEventListener("click", () => {
                 numbers.forEach(number => {
 
                   const person = String(val.__EMPTY_2).split(' - ')[1];
+                  const personFirstLetterUpCase = String(person).split(" ")[0];
+                  const personRestName = String(personFirstLetterUpCase ).substring(1);
+
+
                   document.getElementById("jsondata").innerHTML += `
                   <tr>
                     <td>${val.__EMPTY_2}</td>
                     <td>${String(number).replace('-', '')}</td>
-                    <td><a class="btn btn-zap" href="//api.whatsapp.com/send?phone=55${String(number).replace('-', '')}&text=Oi%20${String(person).split(" ")[0]}%20, tudo bem?" target="_blank" rel="noopener noreferrer" ><img src="../zap.png"></a></td>
+                    <td><a class="btn btn-zap" href="//api.whatsapp.com/send?phone=55${String(number).replace('-', '')}&text=Oi%20${String(personFirstLetterUpCase)[0].toUpperCase() + String(personRestName.toLowerCase())}%20, tudo bem?" target="_blank" rel="noopener noreferrer" ><img src="../zap.png"></a></td>
                   </tr>`;
                 });
               })
